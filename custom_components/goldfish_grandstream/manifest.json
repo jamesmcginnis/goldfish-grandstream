@@ -1,0 +1,12 @@
+{
+  "domain": "goldfish_grandstream",
+  "name": "Goldfish Grandstream",
+  "version": "1.0.0",
+  "documentation": "https://github.com/goldfish-grandstream",
+  "issue_tracker": "https://github.com/goldfish-grandstream/issues",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": [],
+  "iot_class": "local_polling",
+  "config_flow": true
+}
