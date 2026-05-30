@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to your Grandstream phone",
+        "description": "Enter the details for your Grandstream GXP phone. You can find its IP address in the phone's network settings or your router's DHCP list.",
+        "data": {
+          "host": "IP Address",
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the phone. Check the IP address and that the phone is online.",
+      "invalid_auth": "Invalid username or password.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This phone is already configured."
+    }
+  }
+}
