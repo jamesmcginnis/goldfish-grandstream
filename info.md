@@ -4,7 +4,7 @@ Local network integration for **Grandstream GXP series IP phones** — exposes a
 
 ## What's included
 
-- **Call Status sensor** — `idle`, `ringing`, `in_call`, updated every 5 seconds
+- **Call Status sensor** — `idle`, `ringing`, `dialing`, `in_call`, `on_hold`, updated every 5 seconds
 - **Dynamic icons** — the entity icon changes with call state (outline → ringing → in-talk)
 - **UI setup** — configure via Settings → Add Integration, no YAML required
 - **Device card** — the phone appears as a device with model, firmware version, and a link to its web interface
@@ -16,6 +16,10 @@ Local network integration for **Grandstream GXP series IP phones** — exposes a
 ## Compatible hardware
 
 Developed and tested on the **GXP1625** (firmware 1.0.7.81). Other GXP16xx models are likely compatible as they share the same web API.
+
+## Note on single sessions
+
+The GXP phone supports one authenticated session at a time. While this integration is active, it holds that session but releases it cleanly when disabled.
 
 ---
 

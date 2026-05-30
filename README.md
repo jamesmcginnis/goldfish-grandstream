@@ -1,6 +1,5 @@
 # Goldfish Grandstream
 
-
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![License](https://img.shields.io/github/license/jamesmcginnis/goldfish-grandstream.svg?style=flat-square)](LICENSE)
 
@@ -31,7 +30,7 @@ Exposes a **Call Status sensor** that updates in near real-time by polling the p
 
 | Entity | States | Icon |
 |---|---|---|
-| `sensor.grandstream_gxp1625_call_status` | `idle` · `ringing` · `in_call` · `unknown` | Changes with state |
+| `sensor.grandstream_<model>_call_status` | `idle` · `ringing` · `dialing` · `in_call` · `on_hold` | Changes with state |
 
 ---
 
@@ -74,11 +73,34 @@ automation:
           message: "Phone is ringing!"
 ```
 
+Example — trigger an action when a call is answered:
+
+```yaml
+automation:
+  - alias: "Call answered"
+    trigger:
+      - platform: state
+        entity_id: sensor.grandstream_gxp1625_call_status
+        to: "in_call"
+    action:
+      - service: light.turn_on
+        target:
+          entity_id: light.office
+        data:
+          color_name: red
+```
+
 ---
 
 ## Polling interval
 
 The phone is polled every **5 seconds** by default. This matches what the phone's own web UI does and has no noticeable impact on the phone's performance.
+
+---
+
+## Single session limitation
+
+The GXP phone only supports **one authenticated session at a time**. While this integration is running, logging into the phone's web interface at `http://<phone-ip>` will temporarily share the session — the integration will re-authenticate automatically on its next poll if needed. Disabling the integration via Home Assistant releases the session immediately.
 
 ---
 
