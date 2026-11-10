@@ -1,5 +1,9 @@
 # Goldfish Grandstream
 
+If you enjoy Goldfish Grandstream, you can support its development:
+
+[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20Me%20a%20Coffee&emoji=&slug=jamesmcginnis&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff)](https://buymeacoffee.com/jamesmcginnis)
+
 Local network integration for **Grandstream GXP series IP phones** — exposes a real-time call status sensor by polling the phone's built-in HTTP API. No syslog setup, no external dependencies.
 
 ## What's included
@@ -11,7 +15,13 @@ Local network integration for **Grandstream GXP series IP phones** — exposes a
 
 ## Install via HACS
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=jamesmcginnis&repository=goldfish-grandstream&category=integration)
+**Step 1 — Add the repository to HACS:**
+
+[![Open your Home Assistant instance and add this repository to HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=jamesmcginnis&repository=goldfish-grandstream&category=integration)
+
+**Step 2 — After downloading and restarting, add the integration:**
+
+[![Open your Home Assistant instance and start setting up Goldfish Grandstream.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=goldfish_grandstream)
 
 ## Compatible hardware
 

@@ -1,5 +1,9 @@
 # Goldfish Grandstream
 
+If you enjoy Goldfish Grandstream, you can support its development:
+
+[![Buy Me a Coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20Me%20a%20Coffee&emoji=&slug=jamesmcginnis&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff)](https://buymeacoffee.com/jamesmcginnis)
+
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 [![License](https://img.shields.io/github/license/jamesmcginnis/goldfish-grandstream.svg?style=flat-square)](LICENSE)
 
@@ -11,12 +15,18 @@ Exposes a **Call Status sensor** that updates in near real-time by polling the p
 
 ## Install via HACS
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=jamesmcginnis&repository=goldfish-grandstream&category=integration)
+**Step 1 — Add the repository to HACS:**
 
-1. Click the button above — Home Assistant opens and asks you to confirm adding the repo
+[![Open your Home Assistant instance and add this repository to HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=jamesmcginnis&repository=goldfish-grandstream&category=integration)
+
+**Step 2 — After downloading and restarting, add the integration:**
+
+[![Open your Home Assistant instance and start setting up Goldfish Grandstream.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=goldfish_grandstream)
+
+1. Click the **Add to HACS** button above, or in Home Assistant open **HACS** → **⋮ menu** (top right) → **Custom repositories** and add `https://github.com/jamesmcginnis/goldfish-grandstream` as an **Integration** repository
 2. In HACS find **Goldfish Grandstream** and click **Download**
 3. Restart Home Assistant
-4. Go to **Settings → Devices & Services → Add Integration** → search **Goldfish Grandstream**
+4. Click the **Add Integration** button above, or go to **Settings → Devices & Services → + Add Integration** → search **Goldfish Grandstream**
 
 ### Manual installation
 
